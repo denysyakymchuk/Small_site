@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}AdminPage{% endblock %}
+
+{% block content %}
+<div align="center" style="margin-top: 10%;">
+    <form action="/" method="post" enctype="multipart/form-data">
+        <label for="name"><strong>Imie produktu:</strong></label><br>
+        <input type="text" id="name" name="name" maxlength="50" style="text-align:center;"><br><br>
+
+        <label for="description"><strong>Opis:</strong></label><br>
+        <input type="text" id="description" name="description" maxlength="150" style="text-align:center;"><br><br>
+
+        <label for="price"><strong>Cena:</strong></label><br>
+        <input type="text" id="price" name="price" maxlength="20" style="text-align:center;"><br><br>
+
+        <label for="free_size"><strong>Dostępne rozmiary:</strong></label><br>
+        <input type="text" id="free_size" name="free_size" maxlength="50" style="text-align:center;"><br><br>
+
+        <label for="how"><strong>Ilość:</strong></label><br>
+        <input type="how" name="how" id="how" maxlength="4" style="text-align:center;"><br><br>
+
+        <label for="file"><strong>Zdięcie: </strong></label>
+        <input type="file" name="file" id="file" style="text-align:center;"><br><br>
+
+        <button type="submit" class="btn btn-success">Dodać product</button>
+    </form>
+</div>
+{% endblock %}
