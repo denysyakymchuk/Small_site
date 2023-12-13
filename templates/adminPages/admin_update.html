@@ -1,0 +1,29 @@
+{% extends 'basePages/base.html' %}
+
+{% block title %}AdminPage{% endblock %}
+
+{% block content %}
+<div align="center" style="margin-top: 10%;">
+    <form action="/{{ products.id }}/update" method="post" enctype="multipart/form-data">
+        <label for="name"><strong>Imie produktu:</strong></label><br>
+        <input type="text" value="{{ products.name }}" maxlength="500" id="name" name="name" style="text-align:center;"><br><br>
+
+        <label for="description"><strong>Опис:</strong></label><br>
+        <input type="text" value="{{ products.description }}" maxlength="1500" id="description" name="description" style="text-align:center;"><br><br>
+
+        <label for="price"><strong>Ціна:</strong></label><br>
+        <input type="text" value="{{ products.price }}" maxlength="20" id="price" name="price" style="text-align:center;"><br><br>
+
+        <label for="free_size"><strong>Доступні розміри:</strong></label><br>
+        <input type="text" value="{{ products.free_size }}" maxlength="500" id="free_size" name="free_size" style="text-align:center;"><br><br>
+
+        <label for="how"><strong>Доступна кількість:</strong></label><br>
+        <input type="how" value="{{ products.how }}" maxlength="30" name="how" id="how" style="text-align:center;"><br><br>
+
+        <label for="file"><strong>Фото: </strong></label>
+        <input type="file" name="file" id="file" style="text-align:center;"><br><br>
+
+        <button type="submit" class="btn btn-success">Змінити</button>
+    </form>
+</div>
+{% endblock %}
